@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="./assets/faqs.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .upBody {
+        background-color: hsl(292, 42%, 14%);
+        width: 100%;
+        height: 200px;
+        display: grid;
+        place-items: center;
+      }
+      .body {
+        background-color: hsl(275, 100%, 97%);
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      .main {
+        background-color: hsl(0, 0%, 100%);
+        display: grid;
+        grid-template-rows: auto;
+        width: 400px;
+        border-radius: 13px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .title {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        gap: 16px; /*este es un espaciado*/
+        align-items: center;
+        margin-left: 24px;
+        margin-top: 12px;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 16px; /*este es un espaciado*/
+        margin-bottom: 24px;
+        align-items: center;
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+      .content div {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+      }
+      .content p:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+      }
+      .img {
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .content p a:nth-child(1) {
+        font-weight: bold;
+      }
+      .content a:hover {
+        color: hsl(293, 74%, 41%);
+      }
+      .answer {
+        display: block;
+        max-height: 0; /* Initially hide the answer */
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="upBody">
+      <main class="main">
+        <div class="title">
+          <div>
+            <img src="./assets/images/icon-star.svg" alt="" />
+          </div>
+          <h1>FAQs</h1>
+        </div>
+        <div class="content">
+          <div>
+            <p>
+              <a>What is Frontend Mentor, and how will it help me?</a>
+              <span class="answer">
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It's suitable for all levels and
+                ideal for portfolio building.
+              </span>
+            </p>
+            <div class="faq-answer">
+              <input type="image" src="./assets/images/icon-plus.svg" />
+            </div>
+          </div>
+          <div>
+            <p>
+              <a>Is Frontend Mentor free?</a>
+              <span class="answer">
+                Yes, Frontend Mentor offers both free and premium coding
+                challenges, with the free option providing access to a range of
+                projects suitable for all skill levels.
+              </span>
+            </p>
+            <div class="faq-answer">
+              <input type="image" src="./assets/images/icon-plus.svg" />
+            </div>
+          </div>
+          <div>
+            <p>
+              <a>Can I use Frontend Mentor projects in my portfolio? </a>
+              <span class="answer">
+                Yes, you can use projects completed on Frontend Mentor in your
+                portfolio. It's an excellent way to showcase your skills to
+                potential employers!
+              </span>
+            </p>
+            <div class="faq-answer">
+              <input type="image" src="./assets/images/icon-plus.svg" />
+            </div>
+          </div>
+          <div>
+            <p>
+              <a>
+                How can I get help if I'm stuck on a Frontend Mentor challenge?
+              </a>
+              <span class="answer">
+                The best place to get help is inside Frontend Mentor's Discord
+                community. There's a help channel where you can ask questions
+                and seek support from other community members.
+              </span>
+            </p>
+            <div class="faq-answer">
+              <input type="image" src="./assets/images/icon-plus.svg" />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
